@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Social Menu</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="seletor">
+            <div id="seletorCampo">
+                <p id="seletorTexto">Selecione Uma Rede Social</p>
+                <img src="img/arrow.png" id="arrowIcon">
+
+            </div>
+            <ul id="lista" class="hide">
+                <li class="opcoes">
+                    <img src="img/facebook.png">
+                    <p>Facebook</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/instagram.png">
+                    <p>Instagram</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/pinterest.png">
+                    <p>Pinterest</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/twitter.png">
+                    <p>Twitter</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/whatsapp.png">
+                    <p>WhatsApp</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/youtube.png">
+                    <p>Youtube</p>
+                </li>
+                <li class="opcoes">
+                    <img src="img/github.png">
+                    <p>GitHub</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var seletorCampo = document.getElementById("seletorCampo");
+        var seletorTexto = document.getElementById("seletorTexto");
+        var opcoes = document.getElementsByClassName("opcoes");
+        var lista = document.getElementById("lista");
+        var arrowIcon = document.getElementById("arrowIcon");
+
+        seletorCampo.onclick = function () {
+            lista.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+
+        for (opcoes of opcoes) {
+            opcoes.onclick = function () {
+                seletorTexto.innerHTML = this.textContent;
+                lista.classList.toggle("hide");
+                arrowIcon.classList.toggle("rotate");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
